@@ -15,13 +15,14 @@
 
 package com.schibsted.spt.data.jslt;
 
+import java.io.Serializable;
 import java.util.Map;
 import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * Represents a compiled JSLT expression.
  */
-public interface Expression {
+public interface Expression extends Serializable {
 
   // this is an interface because we want to be able to produce
   // different kinds of compiled expressions, in addition to the

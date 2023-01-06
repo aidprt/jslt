@@ -17,11 +17,13 @@ package com.schibsted.spt.data.jslt.filters;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import java.io.Serializable;
+
 /**
  * A filter that can approve/disapprove a JSON value. Used to
  * configure which key/value pairs are kept in JSON objects.
  */
-public interface JsonFilter {
+public interface JsonFilter extends Serializable {
 
   /**
    * Whether or not to accept this value.

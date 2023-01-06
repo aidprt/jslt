@@ -15,11 +15,13 @@
 
 package com.schibsted.spt.data.jslt.impl;
 
+import java.io.Serializable;
+
 /**
  * Represents a position in a JSTL source code file. Used in error
  * messages.
  */
-public class Location {
+public class Location implements Serializable {
   private String source; // can be null, if we don't know
   private int line;
   private int column;

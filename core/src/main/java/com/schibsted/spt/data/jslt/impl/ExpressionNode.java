@@ -15,6 +15,7 @@
 
 package com.schibsted.spt.data.jslt.impl;
 
+import java.io.Serializable;
 import java.util.List;
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -25,7 +26,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * add methods for introspection (for optimization, generating
  * byte-code, etc).
  */
-public interface ExpressionNode {
+public interface ExpressionNode extends Serializable {
 
   public JsonNode apply(Scope scope, JsonNode input);
 
